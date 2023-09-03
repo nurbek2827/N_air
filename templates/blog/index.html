@@ -14,29 +14,14 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img src="./images/shoe3.jpg" alt="...">
+                        <img src="{{ random_adv.image.url }}" alt="...">
                         <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
+                            <h3>{{ random_adv.title}}</h3>
+                            <h4>{{ random_adv.subtitle}}</h4>
                             <span class="color-bar"></span>
                         </div>
                     </div>
-                    <div class="item">
-                      <img src="./images/shoe1.jpg" alt="...">
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
-                    <div class="item">
-                      <img src="./images/shoe2.jpg" alt="...">
-                        <div class="carousel-caption car-re-posn">
-                            <h3>AirMax</h3>
-                            <h4>You feel to fall</h4>
-                            <span class="color-bar"></span>
-                        </div>
-                    </div>
+
                   </div>
 
                   <!-- Controls -->
@@ -75,7 +60,7 @@
         </div>
         <div class="shop-grid">
             <div class="container">
-                {% for i in category %}
+                {% for i in sneaker %}
                 <div class="col-md-4 grid-stn simpleCart_shelfItem">
                      <!-- normal -->
                         <div class="ih-item square effect3 bottom_to_top">
@@ -86,7 +71,7 @@
                                     <h3>{{ i.name }}</h3>
                                 </div>
                                 <div class="pull-right styl-price">
-                                    <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">$190</span></a></p>
+                                    <p><a  href="#" class="item_add"><span class="glyphicon glyphicon-shopping-cart grid-cart" aria-hidden="true"></span> <span class=" item_price">{{ i.price}} {{ i.price_type}}</span></a></p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div></div>

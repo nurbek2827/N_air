@@ -21,6 +21,7 @@ class Category(models.Model):
 class Sneakers(models.Model):
     name = models.CharField(max_length=128)
     image = models.ImageField()
+    last_name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, blank=True)
     type = models.ForeignKey(Category, on_delete=models.CASCADE)
     character = models.TextField()
@@ -60,3 +61,11 @@ class Buy(models.Model):
     how = models.CharField(max_length=100, choices=all_values)
     map = models.TextField()
     email = models.EmailField(blank=True)
+
+
+
+class Advertising(models.Model):
+    title = models.CharField(max_length=100)
+    subtitle = models.CharField(max_length=100)
+    image = models.ImageField()
+

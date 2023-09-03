@@ -58,13 +58,13 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         {% for i in ctg %}
-                                        <li><a href="products.html">{{ i.name }}</a></li>
+                                        <li><a href="{% url 'product' slug=i.slug%}">{{ i.name }}</a></li>
                                           {% endfor %}
                                     </ul>
 
                                 </li>
                                  {% for i in ctg %}
-                                <li><a href="contact.html">{{ i.name }}</a></li>
+                                <li><a href="{% url 'product' slug=i.slug%}">{{ i.name }}</a></li>
                                 {% endfor %}
                                 <div class="clearfix"></div>
                             </ul>
